@@ -1,0 +1,5 @@
+<body>
+    <% test %>
+    <%= test %>
+    <%- test %>
+</body>

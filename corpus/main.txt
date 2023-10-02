@@ -1,0 +1,45 @@
+============================
+Basic HTML
+============================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello World!
+</body>
+</html>
+
+----------------------------
+
+(template
+  (content))
+
+============================
+Basic HTML with etlua
+============================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% "Hello " %><%= "World" %><%- "!" %>
+</body>
+</html>
+
+---------------------------
+
+(template
+  (content)
+  (etlua_tags (exp))
+  (etlua_tags (exp))
+  (etlua_tags (exp))
+  (content))

@@ -22,3 +22,21 @@ pc.etlua = {
 ```
 
 If you want to enable syntax highlighting, copy/move/symlink `queries` to `~/.config/nvim/queries/etlua`.
+
+### Helix
+
+In your languages.toml file add
+
+```toml
+[[grammar]]
+name = "etlua"
+source = { git = "https://github.com/cattokomo/tree-sitter-etlua", rev = "A_COMMIT_HASH" }
+
+[[language]]
+name = "etlua"
+file-types = ["etlua"]
+block-comment-tokens = { start = "<!--", end = "-->"}
+injection-regex = "etlua"
+scope = "source.etlua"
+```
+Then run `helix -g fetch && helix -g build`
